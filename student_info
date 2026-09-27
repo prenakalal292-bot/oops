@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class student{
+String name;
+String usn;
+void accept(){
+Scanner sc= new Scanner(System.in);
+System.out.print("enter student name");
+name =sc.nextLine();
+System.out.print("enter usn");
+usn =sc.next();
+}
+void display() {
+System.out.println("name"+name);
+System.out.println("usn"+usn);
+}
+}
+class Main{
+public static void main (String[]args) {
+Scanner sc= new Scanner(System.in);
+System.out.print("enter number of students");
+int n =sc.nextInt();
+sc.nextLine();
+student[]s=new student[n];
+for (int i=0; i<n; i++){
+System.out.println("\n enter details of student"+(i+1));
+s[i]=new student();
+s[i].accept();
+}
+System.out.println("\n enter details");
+for(int i=0; i<n; i++) {
+System.out.println("\n student "+(i+1));
+s[i].display();
+}
+}
+}
+
+
+
+
+
